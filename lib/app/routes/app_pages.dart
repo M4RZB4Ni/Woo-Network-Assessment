@@ -14,20 +14,10 @@ abstract class AppPages {
     GetPage(
       name: Routes.splash,
       page: SplashPage.new,
-      binding: BindingsBuilder(() {
-        return Get.lazyPut(
-          () => SplashController(Get.find<SplashRepository>()),
-        );
-      }),
       children: [
         GetPage(
           name: Routes.home,
           page: HomePage.new,
-          binding: BindingsBuilder(() {
-            return Get.lazyPut(
-              HomePageController.new,
-            );
-          }),
         ),
       ],
     )

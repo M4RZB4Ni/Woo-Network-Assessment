@@ -9,7 +9,7 @@ import 'package:woo_network_assessment/feature/splash/domain/repositories/splash
 class SplashController extends BaseController {
   SplashController(this._repo);
   final SplashRepository _repo;
-  List<Coin>? coins;
+  RxList<Coin> coins=RxList<Coin>();
 
   @override
   void onInit() {
@@ -21,8 +21,8 @@ class SplashController extends BaseController {
     final response = await _repo.readJsonData();
     response.when(
       success: (final result) async {
-        coins = result.data;
-        realDebugPrint('dataFetched-->${coins!.first}');
+        coins.value = result.data!;
+       // realDebugPrint('dataFetched-->${coins.first}');
         goToHome();
       },
       failure: (final err) {
@@ -33,5 +33,6 @@ class SplashController extends BaseController {
 
   void goToHome() => Get.toNamed(
         '${Routes.splash}${Routes.home}',
+          arguments: coins
       );
 }
