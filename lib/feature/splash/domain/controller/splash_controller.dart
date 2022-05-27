@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:woo_network_assessment/app/base/base_controller.dart';
-import 'package:woo_network_assessment/app/messages/printers.dart';
 import 'package:woo_network_assessment/app/routes/app_routes.dart';
 import 'package:woo_network_assessment/data/data_models/coins_data_model.dart';
 import 'package:woo_network_assessment/data/network/exception/network_exceptions.dart';
@@ -9,7 +8,7 @@ import 'package:woo_network_assessment/feature/splash/domain/repositories/splash
 class SplashController extends BaseController {
   SplashController(this._repo);
   final SplashRepository _repo;
-  RxList<Coin> coins=RxList<Coin>();
+  RxList<Coin> coins = RxList<Coin>();
 
   @override
   void onInit() {
@@ -22,7 +21,8 @@ class SplashController extends BaseController {
     response.when(
       success: (final result) async {
         coins.value = result.data!;
-       // realDebugPrint('dataFetched-->${coins.first}');
+        // realDebugPrint('dataFetched-->${coins.first}');
+
         goToHome();
       },
       failure: (final err) {
@@ -31,8 +31,6 @@ class SplashController extends BaseController {
     );
   }
 
-  void goToHome() => Get.toNamed(
-        '${Routes.splash}${Routes.home}',
-          arguments: coins
-      );
+  void goToHome() =>
+      Get.toNamed('${Routes.splash}${Routes.home}', arguments: coins);
 }

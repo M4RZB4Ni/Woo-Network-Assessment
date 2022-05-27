@@ -4,7 +4,9 @@ import 'package:woo_network_assessment/app/resources/app_colors.dart';
 import 'package:woo_network_assessment/app/resources/app_text_style.dart';
 
 class APPTabBar extends StatelessWidget {
-  const APPTabBar({Key? key, required this.tabController, required this.tabsText}) : super(key: key);
+  const APPTabBar(
+      {Key? key, required this.tabController, required this.tabsText})
+      : super(key: key);
 
   final TabController? tabController;
   final List<String> tabsText;
@@ -16,7 +18,7 @@ class APPTabBar extends StatelessWidget {
       controller: tabController,
       unselectedLabelColor: AppColors.error,
       labelColor: AppColors.primary,
-      tabs:  <Widget>[
+      tabs: <Widget>[
         Tab(
           text: tabsText.first,
         ),

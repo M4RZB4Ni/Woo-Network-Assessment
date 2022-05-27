@@ -1,6 +1,4 @@
-
-extension KBM on double?{
-
+extension KBM on double? {
   String formatGenerator() {
     if (this! > 999 && this! < 99999) {
       return "${(this! / 1000).toStringAsFixed(1)} K";
@@ -16,10 +14,9 @@ extension KBM on double?{
   }
 
   String currencyGenerator() {
-      var value = toString();
-      value = value.replaceAll(RegExp(r'\D'), '');
-      value = value.replaceAll(RegExp(r'\B(?=(\d{3})+(?!\d))'), ',');
-      return value;
-
+    var value = toString();
+    value = value.replaceAll(RegExp(r'\D'), '');
+    value = value.replaceAll(RegExp(r'\B(?=(\d{3})+(?!\d))'), ',');
+    return value;
   }
 }

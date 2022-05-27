@@ -32,7 +32,6 @@ class StorageService implements LocalStorage {
     return convert.jsonDecode(value.toString());
   }
 
-
   @override
   void remove(final String key) {
     GetStorage().remove(key);
@@ -42,6 +41,4 @@ class StorageService implements LocalStorage {
   void removeAll() {
     throw UnimplementedError();
   }
-
-
 }

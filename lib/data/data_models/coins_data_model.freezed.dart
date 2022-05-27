@@ -164,6 +164,7 @@ mixin _$Coin {
   String? get type => throw _privateConstructorUsedError;
   double? get lastPrice => throw _privateConstructorUsedError;
   double? get volume => throw _privateConstructorUsedError;
+  String? get symbol => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -179,7 +180,8 @@ abstract class $CoinCopyWith<$Res> {
       String? quote,
       String? type,
       double? lastPrice,
-      double? volume});
+      double? volume,
+      String? symbol});
 }
 
 /// @nodoc
@@ -197,6 +199,7 @@ class _$CoinCopyWithImpl<$Res> implements $CoinCopyWith<$Res> {
     Object? type = freezed,
     Object? lastPrice = freezed,
     Object? volume = freezed,
+    Object? symbol = freezed,
   }) {
     return _then(_value.copyWith(
       base: base == freezed
@@ -219,6 +222,10 @@ class _$CoinCopyWithImpl<$Res> implements $CoinCopyWith<$Res> {
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
               as double?,
+      symbol: symbol == freezed
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -233,7 +240,8 @@ abstract class _$$_CoinCopyWith<$Res> implements $CoinCopyWith<$Res> {
       String? quote,
       String? type,
       double? lastPrice,
-      double? volume});
+      double? volume,
+      String? symbol});
 }
 
 /// @nodoc
@@ -252,6 +260,7 @@ class __$$_CoinCopyWithImpl<$Res> extends _$CoinCopyWithImpl<$Res>
     Object? type = freezed,
     Object? lastPrice = freezed,
     Object? volume = freezed,
+    Object? symbol = freezed,
   }) {
     return _then(_$_Coin(
       base: base == freezed
@@ -274,6 +283,10 @@ class __$$_CoinCopyWithImpl<$Res> extends _$CoinCopyWithImpl<$Res>
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
               as double?,
+      symbol: symbol == freezed
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -286,7 +299,8 @@ class _$_Coin implements _Coin {
       required this.quote,
       required this.type,
       required this.lastPrice,
-      required this.volume});
+      required this.volume,
+      required this.symbol});
 
   factory _$_Coin.fromJson(Map<String, dynamic> json) => _$$_CoinFromJson(json);
 
@@ -300,10 +314,12 @@ class _$_Coin implements _Coin {
   final double? lastPrice;
   @override
   final double? volume;
+  @override
+  final String? symbol;
 
   @override
   String toString() {
-    return 'Coin(base: $base, quote: $quote, type: $type, lastPrice: $lastPrice, volume: $volume)';
+    return 'Coin(base: $base, quote: $quote, type: $type, lastPrice: $lastPrice, volume: $volume, symbol: $symbol)';
   }
 
   @override
@@ -315,7 +331,8 @@ class _$_Coin implements _Coin {
             const DeepCollectionEquality().equals(other.quote, quote) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.lastPrice, lastPrice) &&
-            const DeepCollectionEquality().equals(other.volume, volume));
+            const DeepCollectionEquality().equals(other.volume, volume) &&
+            const DeepCollectionEquality().equals(other.symbol, symbol));
   }
 
   @JsonKey(ignore: true)
@@ -326,7 +343,8 @@ class _$_Coin implements _Coin {
       const DeepCollectionEquality().hash(quote),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(lastPrice),
-      const DeepCollectionEquality().hash(volume));
+      const DeepCollectionEquality().hash(volume),
+      const DeepCollectionEquality().hash(symbol));
 
   @JsonKey(ignore: true)
   @override
@@ -345,7 +363,8 @@ abstract class _Coin implements Coin {
       required final String? quote,
       required final String? type,
       required final double? lastPrice,
-      required final double? volume}) = _$_Coin;
+      required final double? volume,
+      required final String? symbol}) = _$_Coin;
 
   factory _Coin.fromJson(Map<String, dynamic> json) = _$_Coin.fromJson;
 
@@ -359,6 +378,8 @@ abstract class _Coin implements Coin {
   double? get lastPrice => throw _privateConstructorUsedError;
   @override
   double? get volume => throw _privateConstructorUsedError;
+  @override
+  String? get symbol => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_CoinCopyWith<_$_Coin> get copyWith => throw _privateConstructorUsedError;

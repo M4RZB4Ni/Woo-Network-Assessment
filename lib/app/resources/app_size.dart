@@ -1,5 +1,4 @@
 class AppSize {
-
   static const double s0 = 0;
   static const double s01 = 1;
   static const double s02 = 2;
@@ -55,6 +54,4 @@ class AppSize {
   static const double s342 = 342;
   static const double s500 = 500;
   static const int s2000 = 2000;
-
-
 }

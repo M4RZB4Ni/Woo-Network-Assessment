@@ -21,6 +21,7 @@ class Coin with _$Coin {
     required final String? type,
     required final double? lastPrice,
     required final double? volume,
+    required final String? symbol,
   }) = _Coin;
 
   factory Coin.fromJson(final Map<String, dynamic> json) =>

@@ -5,7 +5,8 @@ class AppMessage {
   static const String tabAll = 'All';
   static const String tabSpot = 'Spot';
   static const String tabFutures = 'Futures';
-  static const String SYMBOL = 'Symbol';
-  static const String LASTPRICE = 'Last Price';
-  static const String VOLUME = 'Volume';
+  static const String symbol = 'Symbol';
+  static const String lastPrice = 'Last Price';
+  static const String volume = 'Volume';
+  static const String noResults = 'No Results found';
 }

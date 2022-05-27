@@ -29,6 +29,5 @@ class MainBinding implements Bindings {
       () => SplashController(Get.find<SplashRepository>()),
       fenix: true,
     );
-
   }
 }

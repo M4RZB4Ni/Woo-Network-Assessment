@@ -24,6 +24,7 @@ _$_Coin _$$_CoinFromJson(Map<String, dynamic> json) => _$_Coin(
       type: json['type'] as String?,
       lastPrice: (json['lastPrice'] as num?)?.toDouble(),
       volume: (json['volume'] as num?)?.toDouble(),
+      symbol: json['symbol'] as String?,
     );
 
 Map<String, dynamic> _$$_CoinToJson(_$_Coin instance) => <String, dynamic>{
@@ -32,4 +33,5 @@ Map<String, dynamic> _$$_CoinToJson(_$_Coin instance) => <String, dynamic>{
       'type': instance.type,
       'lastPrice': instance.lastPrice,
       'volume': instance.volume,
+      'symbol': instance.symbol,
     };

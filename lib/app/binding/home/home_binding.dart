@@ -9,6 +9,4 @@ class HomeBinding implements Bindings {
       fenix: true,
     );
   }
-
-
 }
