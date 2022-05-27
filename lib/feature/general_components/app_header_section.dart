@@ -23,19 +23,19 @@ class APPHeaderSectionState extends State<APPHeaderSection> {
       child: Row(
         children: [
           Flexible(
-              child: Container(
+              child: SizedBox(
                   width: MediaQuery.of(context).size.width / 3,
                   child: Center(
                       child: Text(AppMessage.symbol,
                           style: AppTextStyles.bodyText1)))),
           Flexible(
-              child: Container(
+              child: SizedBox(
                   width: MediaQuery.of(context).size.width / 3,
                   child: Center(
                       child: Text(AppMessage.symbol,
                           style: AppTextStyles.bodyText1)))),
           Flexible(
-              child: Container(
+              child: SizedBox(
                   width: MediaQuery.of(context).size.width / 3,
                   child: Center(
                       child: Text(AppMessage.symbol,
